@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/31346c46c9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="buttons_helper-classes.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
+<style>
+
+    * {
+        
+        box-sizing: border-box;
+        font-family:Helvetica, sans-serif;
+    }
+    body {
+        margin: 0;
+    }
+
+    
+
+    #showcase {
+        background-image: url("lotr2.png");
+        background-position: center;
+        height: 220px;
+        padding: 40px;
+        position: relative
+
+    }
+    
+
+    .main-header {
+        background-color: chocolate;
+        position: fixed;
+        top: 0;
+        padding: 8px 16px;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .main-nav {
+        display: inline-block;
+        width: calc(100% - 120px);
+        text-align: right;
+
+    }
+    .main-nav_items {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+    }
+    .main-nav_item {
+        display: inline-block;
+        margin: 0 10px;            
+    }
+
+
+    .main-header_logo {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .main-nav_item a {
+        color: bisque;
+        text-decoration: none;
+        padding: 3px;
+        font-weight: bold;
+        
+        
+    }
+    
+    .main-nav_item a:link {
+        color: yellow;
+    }
+
+    .main-nav_item a:hover {
+        color: rgb(85, 85, 155); 
+    }
+
+
+    .main-nav_item a:active {
+        color: aqua;
+      
+    }
+
+   .main-nav_item::before {
+    color: white;   
+    content: "\27A7";
+    padding: 3px;
+   }
+   .main-nav_item:hover::before {
+    color: rgb(85, 85, 155);
+   }
+
+   .main-nav_item--login a {
+
+    color: cadetblue;
+    background-color: crimson;
+    padding: 4px 16px;
+    border-radius: 8px;
+    border: 2px solid white;
+
+}
+   .main-nav_item--login::before { 
+    content: none;    
+   }
+
+   .main-nav_item--login a:hover {
+       color: chocolate;
+       border: 5px solid goldenrod;
+       background-color: white;
+   }
+   
+
+   #how-it-works {
+        
+        text-align: center;
+    }
+
+    #how-it-works h2 {
+        color: #3E4555;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .row {
+        margin-bottom: 75px;
+    }
+
+    .col {
+        display: inline-block;
+        width: 30%;
+        padding: 16px;
+        margin: 8px;
+    }
+    
+    .icon-box h3 {
+        font-size: 23px;
+        color: #3E4555;
+    }
+    
+    
+ 
+   .col-2 {
+       display: inline-block;
+       width: calc(50% - 2px);
+       height: 350px;
+       background-color: brown;
+       vertical-align: top;
+   }
+
+   .features__left {
+       background-image: url("features.jpeg");
+       background-position: center;
+       background-size: cover;
+   }
+
+   .features__right {
+       background-color: #edf5f7;
+       padding: 40px;
+       vertical-align: top;
+       
+   }
+
+   .features__right h3 {
+       font-size: 30px;
+   }
+
+   .features__right a {
+       text-decoration: none;
+       padding: 7px 15px;
+       background-color: coral;
+       color: white;
+       border-radius: 5px;
+       text-align: center;
+       border: 1px solid coral;
+       display: inline-block;
+       margin-top: 10px;
+       
+   }
+
+ 
+
+   .ending-part h1 {
+
+    text-align: center;
+    
+    
+   
+
+   }
+
+   .end1 {
+       width: 33.3%;
+       height: 300px;
+       float: left;
+      text-align: center;
+      padding: 5px;
+   }
+  
+
+   .ending-part {
+        width: 1000px;
+        margin: 0 auto;
+        
+
+   }
+
+   
+
+   .bigger {
+       height: 350px;
+       position: relative;
+       top: -10px;
+       
+   }
+
+   .clearfix::after {
+       content: "";
+       display: block;
+       clear: both;
+   }
+
+   .inner-plan {
+    background-color: #edf5f7;
+    padding: 16px 10px;
+    border-radius: 5px;
+    box-shadow: rgba(121, 24, 24, 0.56) 0px 22px 70px 4px;
+    transition: box-shadow .9s;
+   }
+
+   .inner-plan:hover {
+    box-shadow: rgba(50, 24, 121, 0.76) 0px 22px 70px 4px;
+
+   }
+   
+   .plan-badge {
+       color: rgb(122, 55, 6);
+       background-color: white;
+       padding: 8px;
+       border-radius: 5px;
+   }
+
+   .recommended_plan {
+       color: white;
+       background-color: rgb(42, 42, 168)!important;
+   }
+
+   .end1-ul {
+       list-style: none;
+       margin: 0;
+       padding: 0px;
+   }
+
+   .end1 li {
+       margin: 8px 0px;
+   }
+
+   .position-header {
+       position: absolute;
+       margin: 0;
+       font-size: 40px;
+       color: rgb(5, 78, 56);
+       top: 15px;
+       left: 50%;
+       transform: translate(-50%, -50%);
+   }
+
+   .relative-features {
+    margin-top: 50px;
+}
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #backtotop {
+        font-size: 35px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        color: chocolate;
+    }
+
+    #backtotop:hover {
+        color: brown;
+        transition: color .5s;
+    }
+
+    
+</style>
+
+
+</head>
+<body id="body">
+    
+
+    <header class="main-header">
+        <a href="#" class="main-header_logo">Movie App</a>
+           <nav class="main-nav">    
+               <ul class="main-nav_items"> 
+     <li class="main-nav_item"><a href="index.html">Filmler</a></li>    
+     <li class="main-nav_item"><a href="stylebabu.css">Diziler</a></li>    
+     <li class="main-nav_item main-nav_item--login" ><a href="me.html" class="btn btn-outline-primary">Login</a><li>                   
+               </ul>       
+           </nav>
+    </header>
+
+        <main   class="relative-features">
+            <section id="showcase">
+                <h1 class="position-header">Welcome</h1>
+            </section>
+            <section id="how-it-works">
+                <div class="row">
+                <h2>How it works?</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, non.</p>
+                </div>
+
+                <div class="col icon-box">
+                    <h3>Register</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam modi quos qui, explicabo quasi magni.</p>
+                </div>
+                <div class="col icon-box">
+                    <h3>Choose a Plan</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam modi quos qui, explicabo quasi magni.</p>
+                </div>
+                <div class="col icon-box">
+                    <h3>About Movie</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam modi quos qui, explicabo quasi magni.</p>
+                </div>
+
+            </section>
+            <section class="features">
+                <div class="row">
+                    <div class="col-2 features__left"></div><div class="col-2 features__right">
+                        <h3>
+                            Watch All & TV Shows once They get released!   
+                        </h3>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo cupiditate amet assumenda optio, odit molestias neque quis nulla libero labore animi impedit similique sequi nesciunt fuga minus eligendi quos.</p>
+                        
+                        <a class="btn-outline-secondary" href="#">View All Features</a>
+                </div>
+                </div>
+            </section>
+        </main>
+        </div>
+
+
+        <div class="row">
+        <footer class="ending-part clearfix">
+            <h1>Become A Premium Member</h1>
+            <div class="end1">
+                <div class="inner-plan">
+                <h2>Free</h2>
+                <h3>0/Month</h3>
+                <ul class="end1-ul">
+                    <li>Hd Avaliable</li>
+                    <li>Unlimited Movies and Tv Shows</li>
+                    <li>Watch on your phone & tablet</li>
+                    <li>Download and watch offline</li>
+                    <li>Screens you can watch</li>
+                    <li>First Month Free</li>
+                    <br>
+                    <div>
+                    <button class="btn btn-secondary">Choose Plan</button>
+                </div>
+                </ul>
+            </div>
+            </div>
+            <div class="end1 bigger">
+                    <div class="inner-plan recommended_plan">
+                <h2 class="plan-badge">Recommended</h2>
+                <h3>Basic</h3>
+                <h4>$19.99/month</h4>
+                <ul class="end1-ul">
+                    <li>Hd Avaliable</li>
+                    <li>Unlimited Movies and Tv Shows</li>
+                    <li>Watch on your phone & tablet</li>
+                    <li>Download and watch offline</li>
+                    <li>Screens you can watch</li>
+                    <li>First Month Free</li>
+                    <br>
+                    <div>
+                    <button class="btn btn-secondary">Choose Plan</button>
+                </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="end1">
+                    <div class="inner-plan">
+                <h2>Premium</h2>
+                <h3>$49.99/Month</h3>
+                <ul class="end1-ul">
+                    <li>Hd Avaliable</li>
+                    <li>Unlimited Movies and Tv Shows</li>
+                    <li>Watch on your phone & tablet</li>
+                    <li>Download and watch offline</li>
+                    <li>Screens you can watch</li>
+                    <li>First Month Free</li>
+                    <br>
+                    <div>
+                    <button class="btn btn-secondary">Choose Plan</button>
+                    </div>
+                </ul>
+                     </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <a href="#body" id="backtotop">
+        <i class="fas fa-arrow-alt-circle-up"></i>
+    </a>
+
+
+</body>
+</html>
